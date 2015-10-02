@@ -1,11 +1,9 @@
 {{yield}}
 
 <div class="jumbotron">
-
-  <span class="question-title">{{question.title}}</span>
+  {{#link-to 'question' question.id}}<span class="question-title">{{question.title}}</span>{{/link-to}}
   <br>
   <span class="author-name">asked by {{question.author}}</span>
   <br>
   <span class="question-content">{{question.content}}</span>
-  <hr>
 </div>
