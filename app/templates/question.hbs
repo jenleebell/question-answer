@@ -2,10 +2,15 @@
 
 <div class="jumbotron">
 
-  <span class="question-title">{{model.title}}</span>
+  <span class="question-title"><{{model.title}}</span>
   <br>
   <span class="author-name">asked by {{model.author}}</span>
   <br>
   <span class="question-content">{{model.description}}</span>
+  <br>
+  {{edit-question update='update'}}
+
+
+
   <hr>
 </div>
