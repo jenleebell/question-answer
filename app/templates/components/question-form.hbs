@@ -1,0 +1,35 @@
+{{yield}}
+{{#if formShowing}}
+
+<span class="question-title"><h2>Ask a question</h2></span>
+  <form>
+    <div class="container">
+      <div class="form-group">
+        <label for="author"></label>
+        {{input value=author id="author" class="form-control" placeholder="Enter your name"}}
+      </div>
+
+      <div class="form-group">
+        <label for="title"></label>
+        {{input value=title id="title" class="form-control" placeholder="Enter your question"}}
+      </div>
+
+      <div class="form-group">
+        <label for="description"></label>
+        {{textarea value=description class="form-control" rows="5" placeholder="Additional details"}}
+      </div>
+    </div>
+
+      <button class="btn btn-danger" {{action 'save'}}>Submit</button>
+  </form>
+<br>
+{{else}}
+<center>
+  <span class="intro">Do you have questions about your favorite beany drink?
+    <br>
+    Click the button below to ask away!</span>
+  <br>
+  <br>
+  <button class='btn btn-danger'{{action 'formShow'}}>Ask a question</button>
+</center>
+{{/if}}

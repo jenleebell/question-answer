@@ -1,0 +1,11 @@
+{{outlet}}
+
+{{question-form save='save'}}
+<br>
+<hr>
+
+{{#each model as |question|}}
+  {{question-tile question=question}}
+  <!-- <button class="btn btn-warning btn-xs" {{action 'destroyQuestion' question}}>Delete</button> -->
+  <hr>
+{{/each}}
